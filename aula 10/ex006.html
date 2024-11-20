@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 06</title>
+    <style>
+        body{
+            background-color:hsl(251, 100%, 74%);
+            color: #F2EFEB;
+            font: normal 1.4em Arial, Helvetica, sans-serif;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        section{
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        div#area{
+            background-color: #f27e7e;
+            color: #F2EFEB;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Eventos DOM</h1>
+        <hr>
+        <section>
+            <div id="area">
+                interaja...
+            </div>
+        </section>
+    </main>
+
+    <script>
+        var area = window.document.getElementById('area')
+        area.addEventListener('click', clicar)
+        area.addEventListener('mouseenter', entrar)
+        area.addEventListener('mouseout', sair)
+
+        function clicar(){
+            area.innerText = 'Clicou!'
+            area.style.background = '#f2dd7e'
+        }
+
+        function entrar(){
+            area.innerText = 'Entrou!'
+        }
+
+        function sair(){
+            area.innerText = 'Saiu!'
+            area.style.background = '#f27e7e'
+        }
+    </script>
+</body>
+</html>
+
