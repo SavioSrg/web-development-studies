@@ -1,0 +1,35 @@
+
+
+body {
+    background-color: hsl(207, 71%, 58%);
+    color: #F2EFEB;
+}
+
+header{
+    color: white;
+    text-align: center;
+}
+
+h1{
+    font: normal 32px Arial, Helvetica, sans-serif;
+}
+
+main{
+    height: 75vh;
+}
+
+section{
+    background-color: #F2EFEB;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 3px 1px 10px rgba(0, 0, 0, 0.288);
+}
+
+footer{
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+   
