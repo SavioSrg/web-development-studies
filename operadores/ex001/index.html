@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exercicio</title>
+</head>
+
+<body>
+    <header>
+        <h1>Operadores Aritméticos</h1>
+    </header>
+    <main>
+        <section>
+            <p>
+                <label for="textn1">Selecione um número:</label>
+                <input type="number" name="textn1" id="textn1">
+            </p>
+
+            <p>
+                <label for="textn2">Selecione mais um número:</label>
+                <input type="number" name="textn2" id="textn2">
+            </p>
+
+            <button id="btnResultado" onclick="calcular()">Calcular</button>
+
+            <div id="container" aria-live="polite">
+                <div id="divSoma" class="res">
+                    <span id="resultado-soma">Resultado Soma:</span>
+                </div>
+                <div id="divSubstracao" class="res">
+                    <span id="resultado-subtracao">Resultado Subtração:</span>
+                </div>
+                <div id="divMultiplicacao" class="res">
+                    <span id="resultado-multiplicacao">Resultado Multiplicação:</span>
+                </div>
+                <div id="divDivisao" class="res">
+                    <span id="resultado-divisao">Resultado Divisão:</span>
+                </div>
+                <div id="divResto" class="res">
+                    <span id="resultado-resto">Resultado Resto:</span>
+                </div>
+                <div id="divPotencia" class="res">
+                    <span id="resultado-potencia">Resultado Potência:</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por Sávio Sérgio</p>
+    </footer>
+    <script>
+        function calcular() {
+            document.getElementById('container').style.display = 'block';
+
+            // Captura dos elementos de entrada
+            var tn1 = document.getElementById('textn1');
+            var tn2 = document.getElementById('textn2');
+
+            // Captura dos elementos de saída
+            var resSoma = document.getElementById('resultado-soma');
+            var resSubtracao = document.getElementById('resultado-subtracao');
+            var resMultiplicacao = document.getElementById('resultado-multiplicacao');
+            var resDivisao = document.getElementById('resultado-divisao');
+            var resResto = document.getElementById('resultado-resto');
+            var resPotencia = document.getElementById('resultado-potencia');
+
+            // Conversão dos valores de entrada para números
+            var n1 = Number(tn1.value);
+            var n2 = Number(tn2.value);
+
+            // Verifica se os números são válidos
+            if (isNaN(n1) || isNaN(n2)) {
+                alert("Por favor, insira números válidos.");
+                return;
+            }
+
+            // Cálculos
+            var soma = n1 + n2;
+            var subtracao = n1 - n2;
+            var multiplicacao = n1 * n2;
+            var divisao = n1 / n2;
+            var resto = n1 % n2;
+            var potencia = n1 ** n2;
+
+            // Atualização dos resultados no HTML
+            resSoma.textContent = `Soma: ${soma}`;
+            resSubtracao.textContent = `Subtração: ${subtracao}`;
+            resMultiplicacao.textContent = `Multiplicação: ${multiplicacao}`;
+            resDivisao.textContent = `Divisão: ${divisao}`;
+            resResto.textContent = `Resto: ${resto}`;
+            resPotencia.textContent = `Potência: ${potencia}`;
+        }
+    </script>
+</body>
+
+</html>
