@@ -1,0 +1,14 @@
+{
+    "users": [
+        {
+            "id": "randomUUID()",
+            "name": "fulano",
+            "age": 20
+        },
+        {
+            "id": "randomUUID()",
+            "name": "Samuel",
+            "age": 35
+        }
+    ]
+}
