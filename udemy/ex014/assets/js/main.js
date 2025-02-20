@@ -14,10 +14,7 @@ document.getElementById('formulario').addEventListener('submit', function (e) {
 
     const hobbies = organizarHobbies(hobbiesInicial);
 
-    const novoUsuario = { nome, sobrenome, idade, email, hobbies };
-     usuarios.push(novoUsuario);
-
-     console.log(horas);
+    adicionarUsuario(usuarios, { nome, sobrenome, idade, email, hobbies});
 
     const textoPronto = `${periodoDia(horas)}<br>Olá ${nome}, seja bem-vindo(a)!<br>
     Seu sobrenome é ${sobrenome}, você tem ${idade} anos, 
@@ -47,3 +44,7 @@ function periodoDia(horas) {
     return horarioAtual;
 }
 
+function adicionarUsuario (lista, {nome = "Desconhecido", idade = 99, email = "sememail@email.com", hobbies = []}) {
+    lista.push({ nome, sobrenome, idade, email, hobbies });
+    console.log(`✅ Usuário ${nome} adicionado com sucesso!`);
+}
