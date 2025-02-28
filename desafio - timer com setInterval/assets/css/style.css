@@ -1,0 +1,104 @@
+:root {
+    /* Cores principais */
+    --background-color-bloco: rgba(249, 249, 249, 0.592);
+    --border-color: #ddd;
+
+    /* Tipografia */
+    --fonte-padrao: Arial, sans-serif;
+    --fonte-relogio: "Chakra Petch", sans-serif;
+
+    /* Espaçamentos */
+    --spacing-small: 0.5rem;
+    --spacing-medium: 1rem;
+    --spacing-large: 2.5rem;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url("../img/background.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: var(--fonte-padrao);
+    line-height: 1.6;
+}
+
+main {
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 720px;
+    margin: var(--spacing-medium) auto;
+    background-color: var(--background-color-bloco);
+    padding: var(--spacing-large);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+p.relogio {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    font-family: var(--fonte-relogio);
+    font-weight: 400;
+    font-size: 8rem;
+}
+
+p.pausado {
+    color: #242424;
+    font-family: var(--fonte-relogio);
+    font-weight: 500;
+}
+
+.container-btn {
+    display: flex;
+    justify-content: space-around;
+    width: 45%;
+}
+
+.btn {
+    font-size: 1rem;
+    padding: var(--spacing-small);
+    background-color: #f7f7f7;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: var(--spacing-medium);
+    }
+
+    p.relogio {
+        font-size: 6rem;
+    }
+
+    .container-btn {
+        width: 60%;
+    }
+}
