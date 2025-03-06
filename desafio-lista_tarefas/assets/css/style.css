@@ -1,0 +1,83 @@
+:root {
+    /* Cores principais */
+    --background-color-bloco: rgba(249, 249, 249, 0.592);
+    --border-color: #ddd;
+
+    /* Tipografia */
+    --fonte-padrao: Arial, sans-serif;
+
+    /* Espaçamentos */
+    --spacing-small: 0.5rem;
+    --spacing-medium: 1rem;
+    --spacing-large: 2.5rem;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fonte-padrao);
+    line-height: 1.6;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 720px;
+    margin: var(--spacing-medium) auto;
+    background-color: var(--background-color-bloco);
+    padding: var(--spacing-large);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+input {
+    border: 1px solid var(--border-color);
+    padding: var(--spacing-small);
+}
+
+.btn {
+    font-size: 1rem;
+    padding: var(--spacing-small);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+@media (max-width: 640px) {
+    .container {
+        width: 90%;
+        padding: var(--spacing-medium);
+    }
+
+    div.cab {
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .btn {
+        margin-top: 1rem;
+    }
+}
