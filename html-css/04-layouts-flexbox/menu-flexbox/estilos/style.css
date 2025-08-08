@@ -20,29 +20,28 @@ header{
     padding: 10px;
 
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
 }
 
 header > h1{
-    border: 1px dotted black;
-    flex: 0 0 50px;
+    /* border: 1px dotted black; */
+    flex: 0 0 200px;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.233);
 }
 
 header > nav{
-    border: 1px dotted black;
+    /* border: 1px dotted black; */
 
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row wrap;
     justify-content: flex-end;
 }
 
 header> nav > a{
     background-color: black;
     color: white;
-    width: 90vw;
     padding: 10px;
     margin: 5px;
     border-radius: 5px;
@@ -64,7 +63,7 @@ main{
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.301);
 }
 
-@media screen and (min-width: 901px){
+/* @media screen and (min-width: 901px){
     header, header > nav{
         flex-flow: row wrap;
     }
@@ -76,4 +75,4 @@ main{
     header> nav > a{
         width: 25px;
     } 
-}
+} */
