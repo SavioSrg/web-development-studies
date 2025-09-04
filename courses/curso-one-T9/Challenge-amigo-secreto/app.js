@@ -16,10 +16,22 @@ function adicionarAmigo() {
 
 function atualizarLista() {
     listaAmigos.innerHTML = ""
-    
+
     for (let amigo of amigos) {
         let li = document.createElement("li");
         li.textContent = amigo;
         listaAmigos.appendChild(li);
     }
+}
+
+function sortearAmigo() {
+    if(amigos.length === 0) {
+        alert("Adicione pessoas a lista!");
+    }
+
+    let indice = Math.floor(Math.random() * amigos.length)
+    let amigoSorteado = amigos[indice];
+    document.getElementById("resultado").innerHTML = `${amigoSorteado}`;
+
+    listaAmigos.innerHTML = ""
 }
