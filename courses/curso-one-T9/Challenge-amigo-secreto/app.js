@@ -13,3 +13,13 @@ function adicionarAmigo() {
     atualizarLista();  // Atualiza a lista
     input.value = "";  // Limpa o campo
 }
+
+function atualizarLista() {
+    listaAmigos.innerHTML = ""
+    
+    for (let amigo of amigos) {
+        let li = document.createElement("li");
+        li.textContent = amigo;
+        listaAmigos.appendChild(li);
+    }
+}
