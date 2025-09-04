@@ -7,6 +7,7 @@ function adicionarAmigo() {
     // Validação
     if (nome === "") {
         alert("Por favor, insira um nome.");
+        return;
     }
 
     amigos.push(nome); // Adiciona ao array
@@ -27,6 +28,7 @@ function atualizarLista() {
 function sortearAmigo() {
     if(amigos.length === 0) {
         alert("Adicione pessoas a lista!");
+        return;
     }
 
     let indice = Math.floor(Math.random() * amigos.length)
